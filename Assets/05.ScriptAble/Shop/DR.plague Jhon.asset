@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d9a16eeca705f4d8706bae87148428, type: 3}
+  m_Name: DR.plague Jhon
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: dc6e9f1a3b6909a4c810e1513c58e140, type: 3}
+  price: 1000
+  index: 2
+  name: "\uC5ED\uBCD1\uBC15\uC0AC \uC874"
+  desc: "\uADF8\uC758 \uC8FC\uC0AC\uAE30\uB294 \uC774\uBBF8 \uC138\uC0C1\uC744 \uBA78\uB9DD\uC2DC\uD0AC
+    \uC900\uBE44\uAC00 \uB418\uC5B4\uC788\uC2B5\uB2C8\uB2E4"
+  productType: 0

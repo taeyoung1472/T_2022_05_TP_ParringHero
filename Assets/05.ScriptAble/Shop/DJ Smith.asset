@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d9a16eeca705f4d8706bae87148428, type: 3}
+  m_Name: DJ Smith
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: e20caf86f3718bf459d6ba12f5460c47, type: 3}
+  price: 1000
+  index: 1
+  name: "DJ \uC2A4\uBBF8\uC2A4"
+  desc: "\uADF8\uB294 \uADF8\uC800 \uC74C\uC545\uC744 \uC88B\uC544\uD558\uB294 \uC18C\uB144\uC785\uB2C8\uB2E4
+    \uD558\uC9C0\uB9CC \uADF8\uAC00 \uC74C\uCE58\uC778\uAC74 \uC548 \uBE44\uBC00"
+  productType: 0
+  MaxHp: 0
+  Damage: 0
+  TimePetHeal: 0
+  TimePerCoin: 0

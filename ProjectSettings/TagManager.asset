@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - OutLine
+  - Attack
+  - Ground
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Sky
+    uniqueID: 3383251625
+    locked: 0
+  - name: Back
+    uniqueID: 2274098287
+    locked: 0
+  - name: Middle
+    uniqueID: 9867347
+    locked: 0
+  - name: Agent
+    uniqueID: 2703650429
+    locked: 0
+  - name: Front
+    uniqueID: 2346379401
+    locked: 0
+  - name: UI
+    uniqueID: 137597777
+    locked: 0
