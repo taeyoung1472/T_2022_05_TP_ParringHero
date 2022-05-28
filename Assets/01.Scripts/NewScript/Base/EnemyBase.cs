@@ -39,6 +39,9 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     protected readonly int deadHasStr = Animator.StringToHash("Die");
 
     private Fiver _fiver;
+
+    [SerializeField] private AudioClip readyDamaged;
+
     #region 인터페이스 구현부
     public override void Init_Pop()
     {
@@ -82,7 +85,7 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
         {
             if (isCanDamage)
             {
-                print("히히");
+                //print("히히");
                 TimeStop();
                 Instantiate(hitParticle, new Vector3(transform.position.x, transform.position.y + 0.5f), Quaternion.identity);
                 StartCoroutine(Damaged(1));
@@ -121,10 +124,15 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
         while (true)
         {
             yield return new WaitUntil(() => isCanAttack);
+            print("어택딜레이" );
             yield return new WaitForSeconds(enemyInfo.attackDelay);
             isCanDamage = true;
             anim.SetTrigger(attackHashStr);
+            print("패링에이블");
+            PoolManager_Test.instance.Pop(PoolType.Sound).GetComponent<AudioPool>().PlayAudio(readyDamaged);
             yield return new WaitForSeconds(enemyInfo.parringAbleTime);
+
+            print("공격!");
             if (isCanAttack && !isDead)
             {
                 RaycastHit2D hit = Physics2D.Raycast(rayTrans.position, Vector2.left, 15, layerMask);

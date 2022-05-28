@@ -7,7 +7,7 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Agent_Horse
-  m_Controller: {fileID: 9100000, guid: 1e2eeb4c4155eff48a97e87696ef36d1, type: 2}
+  m_Controller: {fileID: 9100000, guid: eb9734b0528bb3945ac67115035fb9ce, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 45bbd5bcac10f2248acbdb405a96904c, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: a2ed23eaf4eaa49ca954a0c751b73415, type: 2}

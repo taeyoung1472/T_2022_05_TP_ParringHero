@@ -17,8 +17,8 @@ MonoBehaviour:
   speed: 2.5
   runSpeed: 1
   dashSpeed: 5
-  parringAbleTime: 0.25
-  attackDelay: 0.25
+  parringAbleTime: 0.6
+  attackDelay: 0.5
   stunTime: 5
   attackMinuesDelay: 5
   judgeTime: 0.2
