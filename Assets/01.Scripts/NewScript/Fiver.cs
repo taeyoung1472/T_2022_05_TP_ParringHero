@@ -11,6 +11,7 @@ public class Fiver : MonoBehaviour
     private int count = 0;
     private Player _player;
     private List<GameObject> displayedAlpabet = new List<GameObject>();
+
     private void Awake()
     {
         _moveBackground = FindObjectsOfType<MoveBackground>();
@@ -50,6 +51,7 @@ public class Fiver : MonoBehaviour
         {
             mb.speed = mb.orignspeed;
         }
+        EnemyBase.staticSpeed = 1f;
         _fiverCol.SetActive(false);
         _player.IsInvincibility = false;
         count = 0;
@@ -68,6 +70,7 @@ public class Fiver : MonoBehaviour
         {
             mb.speed *= 2.5f;
         }
+        EnemyBase.staticSpeed = 2.5f;
         _player.IsInvincibility = true;
         _fiverCol.SetActive(true);
     }

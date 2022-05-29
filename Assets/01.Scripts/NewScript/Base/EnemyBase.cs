@@ -42,6 +42,7 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
 
     [SerializeField] private AudioClip readyDamaged;
 
+    public static float staticSpeed = 1;
     #region 인터페이스 구현부
     public override void Init_Pop()
     {
@@ -149,7 +150,7 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     {
         if (isCanMove)
         {
-            rb.velocity = new Vector2(-currentSpeed, rb.velocity.y);
+            rb.velocity = new Vector2(-currentSpeed * staticSpeed, rb.velocity.y);
         }
         else if (Mathf.Abs(rb.velocity.x) < 0.1f && !isDead)
         {
@@ -207,7 +208,16 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     {
         isCanAttack = false;
         isCanMove = false;
-        rb.AddForce(new Vector2(10f, 2.5f), ForceMode2D.Impulse);
+        Damaged(1);
+        rb.AddForce(new Vector2(Random.Range(10f, 20f), 2.5f), ForceMode2D.Impulse);
+    }
+    virtual public void FeverPush()
+    {
+        isCanAttack = false;
+        isCanMove = false;
+        CamManager.Instance.SetCamShake(0.5f);
+        Damaged(1);
+        rb.AddForce(new Vector2(10, 5f), ForceMode2D.Impulse);
     }
     public void PlaySound(AudioClip clip, float volume = 1)
     {

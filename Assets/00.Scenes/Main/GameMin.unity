@@ -6216,6 +6216,27 @@ MeshRenderer:
   m_SortingLayer: 6
   m_SortingOrder: 10
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &583610826 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6501973792465501615, guid: bd7efb89ab4522c4e8a6825829b71db4, type: 3}
+  m_PrefabInstance: {fileID: 1118751183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &583610831
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583610826}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.29811025}
+  m_Size: {x: 0.49999994, y: 0.72299665}
+  m_Direction: 0
 --- !u!1 &604329276
 GameObject:
   m_ObjectHideFlags: 0
@@ -7757,7 +7778,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.0655673, y: 0.95934165}
+  m_Offset: {x: -0.8956014, y: 0.95934165}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7768,7 +7789,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8163242, y: 2.1351092}
+  m_Size: {x: 1.4763927, y: 2.1351092}
   m_EdgeRadius: 0
 --- !u!224 &1028864755
 RectTransform:
@@ -7808,6 +7829,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6087287456131894208, guid: bd7efb89ab4522c4e8a6825829b71db4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6087287456131894208, guid: bd7efb89ab4522c4e8a6825829b71db4, type: 3}
       propertyPath: m_TagString
       value: Untagged
