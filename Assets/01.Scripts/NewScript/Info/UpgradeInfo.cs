@@ -1,19 +1,18 @@
 using UnityEngine;
+using System;
 [CreateAssetMenu(fileName = "Info", menuName = "UpGrade")]
 public class UpgradeInfo :ScriptableObject
 {
-    public Sprite sprite;
-    public int price;
+    [Header("정보")]
     public string name;
     public string desc;
+    public int price;
+    [Header("업그레이드 정보")]
+    public UpgradeValue upgrade;
+}
+[Serializable]
+public class UpgradeValue
+{
 
-    public int index;
-    public int hp;
-    public int damage;
-    public int timePerHealHp;
-    public int timePerGetCoin;
-    public int time;
-    public float coin;
-    public bool isWhile;
-    public bool isReberse;
+    public bool isRevive = false;
 }

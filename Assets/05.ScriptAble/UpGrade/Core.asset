@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 046866f44e7082a4d921df87bbbba75b, type: 3}
-  m_Name: 05_HP_2
+  m_Name: Core
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 0187fd6f41211df4fb981ef6ec343a54, type: 3}
+  sprite: {fileID: 21300000, guid: 4a45da7d8630a4f8481034fcfd96e6cd, type: 3}
   price: 1000
-  name: "HP \uC790\uB3D9\uD68C\uBCF5 2\uAE09"
-  desc: "\uC2DC\uAC04\uB2F9 HP \uD68C\uBCF5\uB7C9\uC774 +1 \uB429\uB2C8\uB2E4."
-  index: 5
+  name: "\uCF54\uC5B4"
+  desc: "\uC774\uAC83\uC73C\uB85C\uBD80\uD130 \uBAA8\uB4E0 \uC5C5\uADF8\uB808\uC774\uB4DC\uAC00
+    \uC2DC\uC791\uB429\uB2C8\uB2E4"
+  index: 0
   hp: 0
   damage: 0
-  timePerHealHp: 1
-  timePerGetCoin: 0
+  timePerHealHp: 0
+  timePerGetCoin: 1
   time: 0
   coin: 0
   isWhile: 0
