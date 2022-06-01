@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class MoveBackground : MonoBehaviour
 {
-    public float speed;
-    public float limitPos;
-    public float startPos;
-    public float orignspeed;
+    [SerializeField] private float speed;
+    [SerializeField] private float length;
+    [SerializeField] private Transform layer1, layer2;
+    private float orignspeed;
+    private int level = 1;
+
     private void Start()
     {
         orignspeed = speed;
@@ -15,9 +17,25 @@ public class MoveBackground : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
-        if (transform.position.x <= limitPos)
+        if (transform.position.x < -(length * level))
         {
-            transform.position = new Vector3(startPos, transform.position.y, transform.position.z);
+            if(layer1.position.x > layer2.position.x)
+            {
+                layer2.position = new Vector3(layer1.position.x + length, 0, 0);
+            }
+            else
+            {
+                layer1.position = new Vector3(layer2.position.x + length, 0, 0);
+            }
+            level++;
         }
+    }
+    public void SetFever()
+    {
+        speed = orignspeed * 2.5f;
+    }
+    public void EndFiver()
+    {
+        speed = orignspeed;
     }
 }

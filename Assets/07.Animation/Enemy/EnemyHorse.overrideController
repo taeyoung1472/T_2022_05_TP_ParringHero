@@ -6,14 +6,14 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Agent_Horse
-  m_Controller: {fileID: 9100000, guid: eb9734b0528bb3945ac67115035fb9ce, type: 2}
+  m_Name: EnemyHorse
+  m_Controller: {fileID: 9100000, guid: f407c75008ec13444bc779ca8e6c494c, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 45bbd5bcac10f2248acbdb405a96904c, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: a2ed23eaf4eaa49ca954a0c751b73415, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: f28f6b07698afa64788c223754b1f4ff, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 979ee8ad7f983477a84482c464f8b6a3, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: d98f7c88116e94c1597806a94b475144, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 9494a203b3fff4b87bf8b56d1b06d40f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 45bbd5bcac10f2248acbdb405a96904c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a2ed23eaf4eaa49ca954a0c751b73415, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: c66e5eb2778574f1abbd40dcb05e1df7, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: fb3d63259e5844b3f99e8aaace4edd07, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d98f7c88116e94c1597806a94b475144, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9494a203b3fff4b87bf8b56d1b06d40f, type: 2}

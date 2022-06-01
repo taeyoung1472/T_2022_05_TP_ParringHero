@@ -125,15 +125,15 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
         while (true)
         {
             yield return new WaitUntil(() => isCanAttack);
-            print("어택딜레이" );
+          //  print("어택딜레이" );
             yield return new WaitForSeconds(enemyInfo.attackDelay);
             isCanDamage = true;
             anim.SetTrigger(attackHashStr);
-            print("패링에이블");
+           // print("패링에이블");
             PoolManager_Test.instance.Pop(PoolType.Sound).GetComponent<AudioPool>().PlayAudio(readyDamaged);
             yield return new WaitForSeconds(enemyInfo.parringAbleTime);
 
-            print("공격!");
+           // print("공격!");
             if (isCanAttack && !isDead)
             {
                 RaycastHit2D hit = Physics2D.Raycast(rayTrans.position, Vector2.left, 15, layerMask);
@@ -230,6 +230,16 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
         {
             _fiver.SpawnAlpa();
         }
+    }
+    public virtual void DifficultyUp()
+    {
+        float curAttackSpeed = anim.GetFloat("Speed");
+        if (curAttackSpeed > enemyInfo.maxAttackSpeed)        
+        {
+            return;
+        }
+       anim.SetFloat("Speed",curAttackSpeed + 1);
+       Debug.Log(curAttackSpeed);
     }
     #region Legacy Code
     //StartCoroutine(CheckNextAction());

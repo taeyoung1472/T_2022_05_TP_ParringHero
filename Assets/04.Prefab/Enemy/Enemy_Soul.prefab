@@ -891,7 +891,7 @@ Animator:
   m_GameObject: {fileID: 1529247679051543910}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f407c75008ec13444bc779ca8e6c494c, type: 2}
+  m_Controller: {fileID: 22100000, guid: fc7de78115dc30b468318d0b7ce74c2b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1490,9 +1490,9 @@ MonoBehaviour:
   col: {fileID: 9061976966010604390}
   anim: {fileID: 8008665272774780189}
   eyeAnimSpeed: 1
-  stopTime: 0.3
+  stopTime: 0.15
   stopping: 0
-  slowTime: 0.2
+  slowTime: 0.8
   readyDamaged: {fileID: 8300000, guid: 41eca37446a4be44693302a4532fbbdf, type: 3}
 --- !u!1 &2467883686835254585
 GameObject:
