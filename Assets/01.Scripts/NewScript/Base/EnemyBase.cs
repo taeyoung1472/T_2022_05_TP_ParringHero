@@ -39,6 +39,10 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     protected readonly int deadHasStr = Animator.StringToHash("Die");
 
     private Fiver _fiver;
+
+    [SerializeField] private AudioClip readyDamaged;
+
+    public static float staticSpeed = 1;
     #region 인터페이스 구현부
     public override void Init_Pop()
     {
@@ -82,7 +86,7 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
         {
             if (isCanDamage)
             {
-                print("히히");
+                //print("히히");
                 TimeStop();
                 Instantiate(hitParticle, new Vector3(transform.position.x, transform.position.y + 0.5f), Quaternion.identity);
                 StartCoroutine(Damaged(1));
@@ -121,10 +125,15 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
         while (true)
         {
             yield return new WaitUntil(() => isCanAttack);
+          //  print("어택딜레이" );
             yield return new WaitForSeconds(enemyInfo.attackDelay);
             isCanDamage = true;
             anim.SetTrigger(attackHashStr);
+           // print("패링에이블");
+            PoolManager_Test.instance.Pop(PoolType.Sound).GetComponent<AudioPool>().PlayAudio(readyDamaged);
             yield return new WaitForSeconds(enemyInfo.parringAbleTime);
+
+           // print("공격!");
             if (isCanAttack && !isDead)
             {
                 RaycastHit2D hit = Physics2D.Raycast(rayTrans.position, Vector2.left, 15, layerMask);
@@ -141,7 +150,7 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     {
         if (isCanMove)
         {
-            rb.velocity = new Vector2(-currentSpeed, rb.velocity.y);
+            rb.velocity = new Vector2(-currentSpeed * staticSpeed, rb.velocity.y);
         }
         else if (Mathf.Abs(rb.velocity.x) < 0.1f && !isDead)
         {
@@ -199,7 +208,16 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     {
         isCanAttack = false;
         isCanMove = false;
-        rb.AddForce(new Vector2(10f, 2.5f), ForceMode2D.Impulse);
+        Damaged(1);
+        rb.AddForce(new Vector2(Random.Range(10f, 20f), 2.5f), ForceMode2D.Impulse);
+    }
+    virtual public void FeverPush()
+    {
+        isCanAttack = false;
+        isCanMove = false;
+        CamManager.Instance.SetCamShake(0.5f);
+        Damaged(1);
+        rb.AddForce(new Vector2(10, 5f), ForceMode2D.Impulse);
     }
     public void PlaySound(AudioClip clip, float volume = 1)
     {
@@ -212,6 +230,16 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
         {
             _fiver.SpawnAlpa();
         }
+    }
+    public virtual void DifficultyUp()
+    {
+        float curAttackSpeed = anim.GetFloat("Speed");
+        if (curAttackSpeed > enemyInfo.maxAttackSpeed)        
+        {
+            return;
+        }
+       anim.SetFloat("Speed",curAttackSpeed + 1);
+       Debug.Log(curAttackSpeed);
     }
     #region Legacy Code
     //StartCoroutine(CheckNextAction());

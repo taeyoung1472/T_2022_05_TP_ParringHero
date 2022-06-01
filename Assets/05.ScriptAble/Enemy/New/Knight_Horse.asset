@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 2
   damage: 1
-  speed: 7.5
+  speed: 7
   runSpeed: 1
   dashSpeed: 5
-  parringAbleTime: 0.25
-  attackDelay: 0.25
+  parringAbleTime: 0.8
+  attackDelay: 0.5
   stunTime: 5
   attackMinuesDelay: 5
   judgeTime: 0.2
   animTime: 5
-  attackPos: 3
+  attackPos: 7
   particleScale: 0.5
   attack:
   - {fileID: 8300000, guid: 5abbb7ff0cc189341b28d4cdc0e94623, type: 3}

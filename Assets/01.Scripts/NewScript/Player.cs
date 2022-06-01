@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using DG.Tweening;
 
-public class Player : MonoBehaviour , ISound
+public class Player : MonoBehaviour, ISound
 {
     public int MaxHp { set { maxHp = value; } get { return maxHp; } }
     public int CurHp { set { curHp = value; } get { return curHp; } }
@@ -23,17 +23,18 @@ public class Player : MonoBehaviour , ISound
     //[SerializeField] private float attackCharge;
     //[SerializeField] private Slider chargeSlider;
 
+    [SerializeField] private float atkTime = 0f;// 공격 대기신간
 
-private bool isInvincibility = false;
-public bool IsInvincibility
-{
-    get => isInvincibility;
-    set
+    private bool isInvincibility = false;
+    public bool IsInvincibility
     {
-        isInvincibility = value;
+        get => isInvincibility;
+        set
+        {
+            isInvincibility = value;
+        }
     }
-}
-private int curHp;
+    private int curHp;
     bool isDead;
     bool isAttackSucces;
     int timeTemp;
@@ -63,12 +64,17 @@ private int curHp;
     }
     public void Update()
     {
+        atkTime -= Time.deltaTime;
         CheckInput();
     }
     public void CheckInput()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            if (atkTime > 0)
+            {
+                return;
+            }
             if (GameManager.Instance.IsTuto)
             {
                 if (GameManager.Instance.isAttackTuto)
@@ -82,7 +88,7 @@ private int curHp;
                 playerAnimator.SetTrigger("Attack");
                 StartCoroutine(Attack());
             }
-            PlaySound(attackAudioClip[GameManager.Instance.currentUser.playerIndex]); 
+            PlaySound(attackAudioClip[GameManager.Instance.currentUser.playerIndex]);
         }
     }
     IEnumerator CheckAttack()
@@ -107,6 +113,8 @@ private int curHp;
             if (isAttackSucces)
             {
                 isAttackSucces = false;
+                atkTime = 0f;
+
             }
             else
             {
@@ -118,7 +126,7 @@ private int curHp;
     {
         attackCollider.enabled = true;
         attackCollider.transform.DOMoveX(originAttackColPos + attackRange, 0.25f);
-
+        atkTime = 2f;
         yield return new WaitForSeconds(0.25f);
 
         attackCollider.enabled = false;
@@ -132,11 +140,12 @@ private int curHp;
         }
         curHp -= damage;
         //Instantiate(bloodEfeect, transform.position, Quaternion.identity);
-        if(curHp > maxHp)
+        if (curHp > maxHp)
         {
             curHp = maxHp;
         }
-        else if (curHp <= 0 && !isDead){
+        else if (curHp <= 0 && !isDead)
+        {
             Dead();
         }
         heartSystem.Heart(curHp);
@@ -144,7 +153,7 @@ private int curHp;
     public void Heal(int amount)
     {
         curHp += amount;
-        if(curHp >= maxHp)
+        if (curHp >= maxHp)
         {
             curHp = maxHp;
         }
@@ -160,7 +169,7 @@ private int curHp;
     }
     void Dead()
     {
-        if(reberseChance > 0)
+        if (reberseChance > 0)
         {
             reberseChance--;
             curHp = Mathf.RoundToInt(maxHp / 2);

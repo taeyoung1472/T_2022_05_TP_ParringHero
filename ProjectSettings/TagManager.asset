@@ -48,17 +48,20 @@ TagManager:
   - name: Sky
     uniqueID: 3383251625
     locked: 0
+  - name: Far
+    uniqueID: 1595250939
+    locked: 0
   - name: Back
     uniqueID: 2274098287
     locked: 0
   - name: Middle
     uniqueID: 9867347
     locked: 0
-  - name: Agent
-    uniqueID: 2703650429
-    locked: 0
   - name: Front
     uniqueID: 2346379401
+    locked: 0
+  - name: Agent
+    uniqueID: 2703650429
     locked: 0
   - name: UI
     uniqueID: 137597777

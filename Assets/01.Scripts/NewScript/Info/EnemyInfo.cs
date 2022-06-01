@@ -8,6 +8,8 @@ public class EnemyInfo : ScriptableObject
     public float animTime;
     public float attackPos;
     public float particleScale;
+    public float maxAttackSpeed;
+    public float maxSpeed;
     public AudioClip[] attack, damaged, die;
     public enum MonsterType { high, ground, underground, goblin, plant, slimebullet, Wizard, Sekleton, Dathnight, MantiCore };
     public MonsterType monsterType;

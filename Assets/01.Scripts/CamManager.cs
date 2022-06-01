@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using DG.Tweening;
-public class CamManager : MonoBehaviour
+public class CamManager : MonoSingleton<CamManager>
 {
     public CinemachineVirtualCamera vCam;
     CinemachineBasicMultiChannelPerlin cmPerlin;

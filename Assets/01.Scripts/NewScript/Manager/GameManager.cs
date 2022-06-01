@@ -180,6 +180,7 @@ public class GameManager : MonoSingleton<GameManager>
     }
     public void ChangeScene(int index)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(index);
     }
 }
