@@ -1436,7 +1436,7 @@ GameObject:
   - component: {fileID: 179355049}
   - component: {fileID: 179355048}
   m_Layer: 5
-  m_Name: Line (2)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1919,19 +1919,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 219420986}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827353718}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: SetUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UpgradeInfo, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &219420985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1946,7 +1934,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeInfo: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
   upTierTechs: []
-  downTierTechs: []
+  downTierTechs:
+  - {fileID: 1949157764}
+  - {fileID: 1503079159}
+  - {fileID: 861940758}
+  - {fileID: 624911358}
   cantChoiceWithTechs: []
   state: 3
 --- !u!114 &219420986
@@ -1962,7 +1954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1999,7 +1991,7 @@ GameObject:
   - component: {fileID: 272250113}
   - component: {fileID: 272250112}
   m_Layer: 5
-  m_Name: Line (9)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2074,7 +2066,7 @@ GameObject:
   - component: {fileID: 274099865}
   - component: {fileID: 274099864}
   m_Layer: 5
-  m_Name: Line (4)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2185,7 +2177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &296541483
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2472,7 +2464,7 @@ GameObject:
   - component: {fileID: 329340182}
   - component: {fileID: 329340181}
   m_Layer: 5
-  m_Name: Line (11)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2617,19 +2609,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 340774279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827353718}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: SetUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 9e29cc551b040df459ce8770e88a9f27, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UpgradeInfo, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &340774278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2642,8 +2622,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126f4b6b851540240bda602eb28bf02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeInfo: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
-  upTierTechs: []
+  upgradeInfo: {fileID: 11400000, guid: 9e29cc551b040df459ce8770e88a9f27, type: 2}
+  upTierTechs:
+  - {fileID: 1949157764}
   downTierTechs: []
   cantChoiceWithTechs: []
   state: 2
@@ -2660,7 +2641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3385,19 +3366,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 624911359}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827353718}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: SetUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 07710889e6357f649b2abc6dae5721b3, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UpgradeInfo, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &624911358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3410,9 +3379,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126f4b6b851540240bda602eb28bf02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeInfo: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
-  upTierTechs: []
-  downTierTechs: []
+  upgradeInfo: {fileID: 11400000, guid: 07710889e6357f649b2abc6dae5721b3, type: 2}
+  upTierTechs:
+  - {fileID: 219420985}
+  downTierTechs:
+  - {fileID: 2045472487}
+  - {fileID: 1474753064}
+  - {fileID: 1724289792}
   cantChoiceWithTechs: []
   state: 2
 --- !u!114 &624911359
@@ -3428,7 +3401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3540,7 +3513,7 @@ GameObject:
   - component: {fileID: 695474894}
   - component: {fileID: 695474893}
   m_Layer: 5
-  m_Name: Line (7)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3694,7 +3667,7 @@ GameObject:
   - component: {fileID: 724406255}
   - component: {fileID: 724406254}
   m_Layer: 5
-  m_Name: Line (10)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4181,19 +4154,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 861940759}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827353718}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: SetUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: ecd9cecdd3a2fb7448c11285774a6a8c, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UpgradeInfo, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &861940758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4206,9 +4167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126f4b6b851540240bda602eb28bf02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeInfo: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
-  upTierTechs: []
-  downTierTechs: []
+  upgradeInfo: {fileID: 11400000, guid: ecd9cecdd3a2fb7448c11285774a6a8c, type: 2}
+  upTierTechs:
+  - {fileID: 219420985}
+  downTierTechs:
+  - {fileID: 1853908066}
   cantChoiceWithTechs: []
   state: 2
 --- !u!114 &861940759
@@ -4224,7 +4187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4261,7 +4224,7 @@ GameObject:
   - component: {fileID: 911520613}
   - component: {fileID: 911520612}
   m_Layer: 5
-  m_Name: Line (8)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4668,15 +4631,14 @@ MonoBehaviour:
   upGradeSystem: {fileID: 0}
   poolManager: {fileID: 0}
   camManager: {fileID: 0}
-  mainCoin: {fileID: 0}
   pauseManager: {fileID: 0}
   player: {fileID: 0}
   user:
-    coin: 0
+    coin: 16046
     fixedMaxHP: 0
     fixedDamage: 0
     timePerHealHp: 0
-    timePerCoin: 0
+    timePerCoin: 1
     reberseChance: 0
     petMaxHp: 0
     petDamage: 0
@@ -4684,7 +4646,35 @@ MonoBehaviour:
     petTimePerCoin: 0
     playerIndex: 0
     petIndex: 0
-    isUnlockUpgrade: 00
+    upgradeBoolDic:
+    - key: "\uCF54\uC5B4"
+      value: 0
+    - key: "\uBB34\uAE30(\uCC3D)"
+      value: 0
+    - key: "\uC720\uD2F8\uB9AC\uD2F0 \uCF54\uC5B4"
+      value: 0
+    - key: "\uD50C\uB808\uC774\uC5B4 \uCF54\uC5B4"
+      value: 0
+    - key: "\uBB34\uAE30(\uAC80)"
+      value: 0
+    - key: "\uBA54\uD0DC\uC624"
+      value: 0
+    - key: "\uD655\uB960\uCC98\uD615"
+      value: 0
+    - key: "\uC2A4\uD0AC \uCF54\uC5B4"
+      value: 0
+    - key: "\uC2DC\uAC04\uB2F9 \uCF54\uC778"
+      value: 0
+    - key: "\uB3CC\uD30C"
+      value: 0
+    - key: "\uBD80\uD65C"
+      value: 0
+    - key: "\uACF5\uACA9 \uCF54\uC5B4"
+      value: 1
+    - key: "\uB2E4\uC911\uACF5\uACA9"
+      value: 0
+    - key: "\uBB34\uAE30(\uBC29\uD328)"
+      value: 0
     isUnlockCharacter: 
     isUnlockPet: 
   coinUI: {fileID: 1763876187}
@@ -4895,7 +4885,7 @@ GameObject:
   - component: {fileID: 1133703871}
   - component: {fileID: 1133703870}
   m_Layer: 5
-  m_Name: Line (6)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5061,7 +5051,7 @@ GameObject:
   - component: {fileID: 1179051918}
   - component: {fileID: 1179051917}
   m_Layer: 5
-  m_Name: Line (3)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7071,19 +7061,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1263189217}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827353718}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: SetUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 4506971ac7ab1ff4cbe8d2783f95d3d7, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UpgradeInfo, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1263189216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7096,8 +7074,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126f4b6b851540240bda602eb28bf02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeInfo: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
-  upTierTechs: []
+  upgradeInfo: {fileID: 11400000, guid: 4506971ac7ab1ff4cbe8d2783f95d3d7, type: 2}
+  upTierTechs:
+  - {fileID: 1949157764}
   downTierTechs: []
   cantChoiceWithTechs: []
   state: 2
@@ -7114,7 +7093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7420,19 +7399,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1303427913}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827353718}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: SetUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: ea38ba5500f0ba947ab56cf7ceec1071, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UpgradeInfo, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1303427912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7445,8 +7412,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126f4b6b851540240bda602eb28bf02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeInfo: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
-  upTierTechs: []
+  upgradeInfo: {fileID: 11400000, guid: ea38ba5500f0ba947ab56cf7ceec1071, type: 2}
+  upTierTechs:
+  - {fileID: 1503079159}
   downTierTechs: []
   cantChoiceWithTechs: []
   state: 2
@@ -7463,7 +7431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7978,19 +7946,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1474753065}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827353718}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: SetUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 69aaecbe254e69c479a86ce084d7f0ec, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UpgradeInfo, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1474753064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8003,7 +7959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126f4b6b851540240bda602eb28bf02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeInfo: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
+  upgradeInfo: {fileID: 11400000, guid: 69aaecbe254e69c479a86ce084d7f0ec, type: 2}
   upTierTechs: []
   downTierTechs: []
   cantChoiceWithTechs: []
@@ -8021,7 +7977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8130,19 +8086,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1503079160}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827353718}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: SetUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: db79a36a257fcab458aa38e30b7ae952, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UpgradeInfo, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1503079159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8155,10 +8099,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126f4b6b851540240bda602eb28bf02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeInfo: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
-  upTierTechs: []
-  downTierTechs: []
-  cantChoiceWithTechs: []
+  upgradeInfo: {fileID: 11400000, guid: db79a36a257fcab458aa38e30b7ae952, type: 2}
+  upTierTechs:
+  - {fileID: 219420985}
+  downTierTechs:
+  - {fileID: 1303427912}
+  - {fileID: 1733521333}
+  cantChoiceWithTechs:
+  - {fileID: 1303427912}
+  - {fileID: 1733521333}
   state: 2
 --- !u!114 &1503079160
 MonoBehaviour:
@@ -8173,7 +8122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8285,7 +8234,7 @@ GameObject:
   - component: {fileID: 1623991924}
   - component: {fileID: 1623991923}
   m_Layer: 5
-  m_Name: Line (5)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8580,19 +8529,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1724289793}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827353718}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: SetUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 51b7a2e5d84873e4f8d00995adbc8018, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UpgradeInfo, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1724289792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8605,7 +8542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126f4b6b851540240bda602eb28bf02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeInfo: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
+  upgradeInfo: {fileID: 11400000, guid: 51b7a2e5d84873e4f8d00995adbc8018, type: 2}
   upTierTechs: []
   downTierTechs: []
   cantChoiceWithTechs: []
@@ -8623,7 +8560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8718,7 +8655,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5689321
+  m_Text: 0
 --- !u!222 &1727692941
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8809,19 +8746,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1733521334}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827353718}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: SetUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: e27e97207040fa74cb35dda412271556, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UpgradeInfo, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1733521333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8834,8 +8759,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126f4b6b851540240bda602eb28bf02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeInfo: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
-  upTierTechs: []
+  upgradeInfo: {fileID: 11400000, guid: e27e97207040fa74cb35dda412271556, type: 2}
+  upTierTechs:
+  - {fileID: 1503079159}
   downTierTechs: []
   cantChoiceWithTechs: []
   state: 2
@@ -8852,7 +8778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8966,18 +8892,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1763876187}
-        m_TargetAssemblyTypeName: CoinUI, Assembly-CSharp
-        m_MethodName: AddCoin
-        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9294,7 +9208,7 @@ GameObject:
   - component: {fileID: 1775941300}
   - component: {fileID: 1775941299}
   m_Layer: 5
-  m_Name: Line (12)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9412,8 +9326,21 @@ MonoBehaviour:
   upgradeDesc: {fileID: 1410367618}
   upGradeImage: {fileID: 1755090701}
   btn: {fileID: 1742231887}
-  teches:
+  tech:
   - {fileID: 219420985}
+  - {fileID: 1949157764}
+  - {fileID: 1263189216}
+  - {fileID: 340774278}
+  - {fileID: 2119715920}
+  - {fileID: 1503079159}
+  - {fileID: 1303427912}
+  - {fileID: 1733521333}
+  - {fileID: 861940758}
+  - {fileID: 1853908066}
+  - {fileID: 624911358}
+  - {fileID: 2045472487}
+  - {fileID: 1474753064}
+  - {fileID: 1724289792}
 --- !u!1 &1846591733
 GameObject:
   m_ObjectHideFlags: 0
@@ -9534,19 +9461,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1853908067}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827353718}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: SetUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 8862bcd3e62b64d4ea10f342aaf5f401, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UpgradeInfo, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1853908066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9559,8 +9474,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126f4b6b851540240bda602eb28bf02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeInfo: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
-  upTierTechs: []
+  upgradeInfo: {fileID: 11400000, guid: 8862bcd3e62b64d4ea10f342aaf5f401, type: 2}
+  upTierTechs:
+  - {fileID: 861940758}
   downTierTechs: []
   cantChoiceWithTechs: []
   state: 2
@@ -9577,7 +9493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9889,19 +9805,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1949157765}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827353718}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: SetUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 87b85ecffdb33c149b67364d244182e2, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UpgradeInfo, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1949157764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9914,10 +9818,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126f4b6b851540240bda602eb28bf02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeInfo: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
-  upTierTechs: []
-  downTierTechs: []
-  cantChoiceWithTechs: []
+  upgradeInfo: {fileID: 11400000, guid: 87b85ecffdb33c149b67364d244182e2, type: 2}
+  upTierTechs:
+  - {fileID: 219420985}
+  downTierTechs:
+  - {fileID: 1263189216}
+  - {fileID: 340774278}
+  - {fileID: 2119715920}
+  cantChoiceWithTechs:
+  - {fileID: 1263189216}
+  - {fileID: 340774278}
+  - {fileID: 2119715920}
   state: 2
 --- !u!114 &1949157765
 MonoBehaviour:
@@ -9932,7 +9843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10211,19 +10122,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2045472488}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827353718}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: SetUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 37dfc89508ffb774188d0efbbd40aa52, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UpgradeInfo, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2045472487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10236,7 +10135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126f4b6b851540240bda602eb28bf02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeInfo: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
+  upgradeInfo: {fileID: 11400000, guid: 37dfc89508ffb774188d0efbbd40aa52, type: 2}
   upTierTechs: []
   downTierTechs: []
   cantChoiceWithTechs: []
@@ -10254,7 +10153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10291,7 +10190,7 @@ GameObject:
   - component: {fileID: 2046034913}
   - component: {fileID: 2046034912}
   m_Layer: 5
-  m_Name: Line (1)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10560,19 +10459,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2119715921}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827353718}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: SetUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 1241965aa3f51a34da3203b00d1c19df, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UpgradeInfo, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2119715920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10585,8 +10472,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126f4b6b851540240bda602eb28bf02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeInfo: {fileID: 11400000, guid: 15dabe46c6401c746bdd6d1a851ccdfb, type: 2}
-  upTierTechs: []
+  upgradeInfo: {fileID: 11400000, guid: 1241965aa3f51a34da3203b00d1c19df, type: 2}
+  upTierTechs:
+  - {fileID: 1949157764}
   downTierTechs: []
   cantChoiceWithTechs: []
   state: 2
@@ -10603,7 +10491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

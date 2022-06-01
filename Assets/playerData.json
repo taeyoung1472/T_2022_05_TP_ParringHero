@@ -1,0 +1,74 @@
+{
+    "coin": 6046,
+    "fixedMaxHP": 0,
+    "fixedDamage": 0,
+    "timePerHealHp": 0,
+    "timePerCoin": 2,
+    "reberseChance": 0,
+    "petMaxHp": 0,
+    "petDamage": 0,
+    "petTimePetHeal": 0,
+    "petTimePerCoin": 0,
+    "playerIndex": 0,
+    "petIndex": 0,
+    "upgradeBoolDic": [
+        {
+            "key": "코어",
+            "value": true
+        },
+        {
+            "key": "무기(창)",
+            "value": false
+        },
+        {
+            "key": "유틸리티 코어",
+            "value": true
+        },
+        {
+            "key": "플레이어 코어",
+            "value": true
+        },
+        {
+            "key": "무기(검)",
+            "value": false
+        },
+        {
+            "key": "메태오",
+            "value": false
+        },
+        {
+            "key": "확률처형",
+            "value": false
+        },
+        {
+            "key": "스킬 코어",
+            "value": true
+        },
+        {
+            "key": "시간당 코인",
+            "value": true
+        },
+        {
+            "key": "돌파",
+            "value": false
+        },
+        {
+            "key": "부활",
+            "value": false
+        },
+        {
+            "key": "공격 코어",
+            "value": true
+        },
+        {
+            "key": "다중공격",
+            "value": false
+        },
+        {
+            "key": "무기(방패)",
+            "value": false
+        }
+    ],
+    "isUnlockCharacter": [],
+    "isUnlockPet": []
+}

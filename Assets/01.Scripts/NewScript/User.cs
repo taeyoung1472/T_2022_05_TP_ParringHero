@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 [System.Serializable]
 public class User
 {
@@ -19,7 +21,28 @@ public class User
 
     //public bool isTutoClear;
 
-    public bool[] isUnlockUpgrade;
+    public List<DictionaryJson<string, bool>> upgradeBoolDic;//Dictionary<string, bool> upgradeBoolDic = new Dictionary<string, bool>();
+    public bool CheckJsonDicContains(string key)
+    {
+        foreach (DictionaryJson<string, bool> dic in upgradeBoolDic)
+        {
+            if (dic.Key == key)
+                return true;
+        }
+        return false;
+    }
+    public int MatchKeyIndex(string key)
+    {
+        int i = 0;
+        foreach (DictionaryJson<string, bool> dic in upgradeBoolDic)
+        {
+            if (dic.Key == key)
+                return i;
+            i++;
+        }
+        return -1;
+    }
+    //public bool[] isUnlockUpgrade;
     public bool[] isUnlockCharacter;
     public bool[] isUnlockPet;
 }

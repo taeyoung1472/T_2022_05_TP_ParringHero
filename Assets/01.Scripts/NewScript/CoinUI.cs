@@ -13,6 +13,7 @@ public class CoinUI : MonoBehaviour
     {
         if (GameManager.Instance.IsMenu)
         {
+            print("Menu");
             coin = GameManager.Instance.currentUser.coin;
             AddCoin(0);
             return;
@@ -23,6 +24,11 @@ public class CoinUI : MonoBehaviour
     {
         coin += value;
         coinText.text = string.Format("{0:N0}",coin);
+    }
+    public void Init()
+    {
+        coin = GameManager.Instance.currentUser.coin;
+        coinText.text = string.Format("{0:N0}", coin);
     }
     IEnumerator GetCoinPerSecond()
     {

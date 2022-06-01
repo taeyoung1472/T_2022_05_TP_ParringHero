@@ -4,6 +4,8 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
+
 public class GameManager : MonoSingleton<GameManager>
 {
     #region 프로피터
@@ -14,7 +16,6 @@ public class GameManager : MonoSingleton<GameManager>
     [SerializeField] private UpGradeSystem upGradeSystem;
     [SerializeField] private PoolManager poolManager;
     [SerializeField] private CamManager camManager;
-    [SerializeField] private MainCoin mainCoin;
     [SerializeField] private PauseManager pauseManager;
     [SerializeField] private Transform player;
 
@@ -31,6 +32,8 @@ public class GameManager : MonoSingleton<GameManager>
     public Transform PlayerSpawnPos;
     public GameObject Sasin;
     public GameObject Gisa;
+
+    public Dictionary<string, bool> upgradeBoolDic = new Dictionary<string, bool>();
     //public Transform EnemyPos;
 
     private void Awake()
@@ -38,7 +41,17 @@ public class GameManager : MonoSingleton<GameManager>
         Time.timeScale = 1;
         LoadUser();
         SaveUser();
+        InitDicJson();
     }
+
+    private void InitDicJson()
+    {
+        foreach (DictionaryJson<string, bool> dic in user.upgradeBoolDic)
+        {
+            upgradeBoolDic.Add(dic.Key, dic.Value);
+        }
+    }
+
     public void Start()
     {
         if (isMenu) return;
@@ -66,10 +79,7 @@ public class GameManager : MonoSingleton<GameManager>
         {
             user.coin -= price;
             SaveUser();
-            if (mainCoin)
-            {
-                mainCoin.UpdateCoinUI();
-            }
+            coinUI.Init();
             return true;
         }
         else
@@ -95,7 +105,6 @@ public class GameManager : MonoSingleton<GameManager>
         {
             try
             {
-                mainCoin = FindObjectOfType<MainCoin>();
                 print($"정상적으로 \"FindObjectOfType\" 작동완료 Succes : {Time.time} [MenuScene]");
             }
             catch
@@ -123,15 +132,30 @@ public class GameManager : MonoSingleton<GameManager>
     public void SaveUser()
     {
         print("저장");
+        foreach (var dic in upgradeBoolDic)
+        {
+            DictionaryJson<string, bool> jsonDic = new DictionaryJson<string, bool>();
+            jsonDic.Key = dic.Key;
+            jsonDic.Value = dic.Value;
+            if (!user.CheckJsonDicContains(jsonDic.Key))
+            {
+                user.upgradeBoolDic.Add(jsonDic);
+            }
+            else
+            {
+                int idx = user.MatchKeyIndex(dic.Key);
+                user.upgradeBoolDic[idx] = jsonDic;
+            }
+        }
         string jsonData = JsonUtility.ToJson(user, true);
-        string path = Path.Combine(Application.persistentDataPath, "playerData.json");
+        string path = Path.Combine(Application.dataPath, "playerData.json");
         File.WriteAllText(path, jsonData);
     }
     [ContextMenu("불러오기")]
     public void LoadUser()
     {
         print("불러오기");
-        string path = Path.Combine(Application.persistentDataPath, "playerData.json");
+        string path = Path.Combine(Application.dataPath, "playerData.json");
         string jsonData = File.ReadAllText(path);
         user = JsonUtility.FromJson<User>(jsonData);
         coinUI.AddCoin(0);

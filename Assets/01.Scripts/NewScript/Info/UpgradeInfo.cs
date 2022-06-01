@@ -13,6 +13,34 @@ public class UpgradeInfo :ScriptableObject
 [Serializable]
 public class UpgradeValue
 {
-
+    [Header("수치 변화")]
+    public int timePerCoin = 0;
+    public int timePerHp = 0;
+    [Header("극적 변화")]
     public bool isRevive = false;
+    [Space(10)]
+    public WeaponType weaponType = WeaponType.None;
+    [Space(10)]
+    public SkillType skillType = SkillType.None;
+    [Space(10)]
+    public UtilityType utilityType = UtilityType.None;
+}
+public enum WeaponType
+{
+    None,
+    Sword,
+    Length,
+    Shild
+}
+public enum SkillType
+{
+    None,
+    Meteo,
+    Run
+}
+public enum UtilityType
+{
+    None,
+    Multi,
+    PerpectKill
 }
