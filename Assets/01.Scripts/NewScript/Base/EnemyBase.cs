@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//이러면 돼었을걸?
 public class EnemyBase : PoolAbleObject//PoolingBase , ISound
 {
     [SerializeField] protected EnemyInfo enemyInfo;
@@ -16,11 +17,12 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     protected int currentHp;
     protected Rigidbody2D rb;
     public Rigidbody2D Rb { get => rb; }
+    float diffcultySpeed = 1f;
 
     [SerializeField] protected Animator anim;
     [Header("눈애니메이션 속도")]
     [Range(0, 2)]
-    [SerializeField]  private float eyeAnimSpeed = 1f;
+    [SerializeField] private float eyeAnimSpeed = 1f;
     protected bool isCanMove = true;
     protected bool isDead = false;
     protected bool isDeadEffect = false;
@@ -42,11 +44,16 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
 
     [SerializeField] private AudioClip readyDamaged;
 
+    [SerializeField]
+    private DifficultySO _difficultySO;
     public static float staticSpeed = 1;
+
     #region 인터페이스 구현부
     public override void Init_Pop()
     {
-
+        print($"난이도가 \"{GameManager.Instance.currentDifficultySO.name}\" 으로 적용됨");//그냥 확인해볼려고
+        print($"속도 가 \"{GameManager.Instance.currentDifficultySO.animAtkSpeed}\" 으로 적용됨");//그냥 확인해볼려고
+        _difficultySO = GameManager.Instance.currentDifficultySO;
     }
 
     public override void Init_Push()
@@ -125,15 +132,15 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
         while (true)
         {
             yield return new WaitUntil(() => isCanAttack);
-          //  print("어택딜레이" );
+            //  print("어택딜레이" );
             yield return new WaitForSeconds(enemyInfo.attackDelay);
             isCanDamage = true;
             anim.SetTrigger(attackHashStr);
-           // print("패링에이블");
+            // print("패링에이블");
             PoolManager_Test.instance.Pop(PoolType.Sound).GetComponent<AudioPool>().PlayAudio(readyDamaged);
             yield return new WaitForSeconds(enemyInfo.parringAbleTime);
 
-           // print("공격!");
+            // print("공격!");
             if (isCanAttack && !isDead)
             {
                 RaycastHit2D hit = Physics2D.Raycast(rayTrans.position, Vector2.left, 15, layerMask);
@@ -150,7 +157,7 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     {
         if (isCanMove)
         {
-            rb.velocity = new Vector2(-currentSpeed * staticSpeed, rb.velocity.y);
+            rb.velocity = new Vector2(-currentSpeed * diffcultySpeed, rb.velocity.y);
         }
         else if (Mathf.Abs(rb.velocity.x) < 0.1f && !isDead)
         {
@@ -233,13 +240,10 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     }
     public virtual void DifficultyUp()
     {
-        float curAttackSpeed = anim.GetFloat("Speed");
-        if (curAttackSpeed > enemyInfo.maxAttackSpeed)        
-        {
-            return;
-        }
-       anim.SetFloat("Speed",curAttackSpeed + 1);
-       Debug.Log(curAttackSpeed);
+        float curAttackSpeed = _difficultySO.animAtkSpeed;//어차피 여기서 재 대입 하장ㄶ아
+        diffcultySpeed = _difficultySO.animMoveSpeed;//스크립트 에이블 오브젝트 안에있는 변수는 접근 안하는게 좋음(바꾸는거)
+        anim.SetFloat("Speed", curAttackSpeed);
+
     }
     #region Legacy Code
     //StartCoroutine(CheckNextAction());

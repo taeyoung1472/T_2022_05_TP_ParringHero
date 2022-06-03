@@ -33,6 +33,7 @@ public class GameManager : MonoSingleton<GameManager>
     public GameObject Sasin;
     public GameObject Gisa;
 
+    public DifficultySO currentDifficultySO;
     public Dictionary<string, bool> upgradeBoolDic = new Dictionary<string, bool>();
     //public Transform EnemyPos;
 

@@ -25,6 +25,8 @@ MonoBehaviour:
   animTime: 5
   attackPos: 3
   particleScale: 0.5
+  maxAttackSpeed: 1.5
+  maxSpeed: 5
   attack:
   - {fileID: 8300000, guid: 5abbb7ff0cc189341b28d4cdc0e94623, type: 3}
   - {fileID: 8300000, guid: f7de01baace8a0a439235025fe73a56e, type: 3}

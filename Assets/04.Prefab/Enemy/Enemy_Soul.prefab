@@ -879,7 +879,7 @@ SortingGroup:
   m_GameObject: {fileID: 1529247679051543910}
   m_Enabled: 1
   m_SortingLayerID: -1591316867
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 5
 --- !u!95 &8008665272774780189
 Animator:
@@ -1494,6 +1494,7 @@ MonoBehaviour:
   stopping: 0
   slowTime: 0.8
   readyDamaged: {fileID: 8300000, guid: 41eca37446a4be44693302a4532fbbdf, type: 3}
+  _easyDifficultySO: {fileID: 11400000, guid: 721440a2ab870f84287cdeb9876f488e, type: 2}
 --- !u!1 &2467883686835254585
 GameObject:
   m_ObjectHideFlags: 0

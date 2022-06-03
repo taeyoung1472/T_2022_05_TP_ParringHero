@@ -8,6 +8,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private Transform spawnPos; 
     [SerializeField] private SpawnInfo[] spawnInfos;
     [SerializeField] private float spawnTime;
+
     void Start()
     {
         StartCoroutine(SpawnCor());
