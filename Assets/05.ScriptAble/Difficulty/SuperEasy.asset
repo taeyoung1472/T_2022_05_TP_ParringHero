@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc3e48536423b7c49a442172ab3c2afc, type: 3}
-  m_Name: Easy
+  m_Name: SuperEasy
   m_EditorClassIdentifier: 
-  name: "\uC26C\uC6C0"
-  animAtkSpeed: 1.05
-  animMoveSpeed: 1.2
+  name: "\uAE30\uBCF8"
+  animAtkSpeed: 1
+  animMoveSpeed: 1

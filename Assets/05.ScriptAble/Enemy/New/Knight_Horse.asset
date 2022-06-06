@@ -17,14 +17,16 @@ MonoBehaviour:
   speed: 7
   runSpeed: 1
   dashSpeed: 5
-  parringAbleTime: 0.8
-  attackDelay: 0.5
+  parringAbleTime: 1
+  attackDelay: 1
   stunTime: 5
   attackMinuesDelay: 5
   judgeTime: 0.2
   animTime: 5
   attackPos: 7
   particleScale: 0.5
+  maxAttackSpeed: 0
+  maxSpeed: 0
   attack:
   - {fileID: 8300000, guid: 5abbb7ff0cc189341b28d4cdc0e94623, type: 3}
   - {fileID: 8300000, guid: f7de01baace8a0a439235025fe73a56e, type: 3}

@@ -1,9 +1,9 @@
 {
-    "coin": 6092,
+    "coin": 103,
     "fixedMaxHP": 0,
     "fixedDamage": 0,
     "timePerHealHp": 0,
-    "timePerCoin": 2,
+    "timePerCoin": 0,
     "reberseChance": 0,
     "petMaxHp": 0,
     "petDamage": 0,
@@ -11,64 +11,7 @@
     "petTimePerCoin": 0,
     "playerIndex": 0,
     "petIndex": 0,
-    "upgradeBoolDic": [
-        {
-            "key": "코어",
-            "value": true
-        },
-        {
-            "key": "무기(�?",
-            "value": false
-        },
-        {
-            "key": "?�틸리티 코어",
-            "value": true
-        },
-        {
-            "key": "?�레?�어 코어",
-            "value": true
-        },
-        {
-            "key": "무기(검)",
-            "value": false
-        },
-        {
-            "key": "메태??,
-            "value": false
-        },
-        {
-            "key": "?�률처형",
-            "value": false
-        },
-        {
-            "key": "?�킬 코어",
-            "value": true
-        },
-        {
-            "key": "?�간??코인",
-            "value": true
-        },
-        {
-            "key": "?�파",
-            "value": false
-        },
-        {
-            "key": "부??,
-            "value": false
-        },
-        {
-            "key": "공격 코어",
-            "value": true
-        },
-        {
-            "key": "?�중공격",
-            "value": false
-        },
-        {
-            "key": "무기(방패)",
-            "value": false
-        }
-    ],
+    "upgradeBoolDic": [],
     "isUnlockCharacter": [],
     "isUnlockPet": []
 }

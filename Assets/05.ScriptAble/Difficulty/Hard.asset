@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Hard
   m_EditorClassIdentifier: 
   name: "\uC5B4\uB824\uC6C0"
-  animAtkSpeed: 1.5
-  animMoveSpeed: 2
+  animAtkSpeed: 1.15
+  animMoveSpeed: 1.8
