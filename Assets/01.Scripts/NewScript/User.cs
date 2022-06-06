@@ -20,6 +20,8 @@ public class User
     public int petIndex;
 
     //public bool isTutoClear;
+    public WeaponType weaponType;
+    public List<SkillType> skillTypes;
 
     public List<DictionaryJson<string, bool>> upgradeBoolDic;//Dictionary<string, bool> upgradeBoolDic = new Dictionary<string, bool>();
     public bool CheckJsonDicContains(string key)

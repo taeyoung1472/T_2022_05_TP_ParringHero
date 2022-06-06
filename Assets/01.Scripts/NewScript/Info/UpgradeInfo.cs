@@ -29,8 +29,7 @@ public enum WeaponType
 {
     None,
     Sword,
-    Length,
-    Shild
+    Axe,
 }
 public enum SkillType
 {

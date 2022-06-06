@@ -1686,7 +1686,7 @@ GameObject:
   - component: {fileID: 3084330160755832118}
   m_Layer: 6
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2105,7 +2105,7 @@ MonoBehaviour:
   stopping: 0
   slowTime: 0.15
   readyDamaged: {fileID: 8300000, guid: 41eca37446a4be44693302a4532fbbdf, type: 3}
-  _easyDifficultySO: {fileID: 11400000, guid: 721440a2ab870f84287cdeb9876f488e, type: 2}
+  _difficultySO: {fileID: 0}
 --- !u!1 &3389330216507170854
 GameObject:
   m_ObjectHideFlags: 0

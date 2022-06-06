@@ -1,9 +1,9 @@
 {
-    "coin": 6092,
+    "coin": 50294,
     "fixedMaxHP": 0,
     "fixedDamage": 0,
     "timePerHealHp": 0,
-    "timePerCoin": 2,
+    "timePerCoin": 0,
     "reberseChance": 0,
     "petMaxHp": 0,
     "petDamage": 0,
@@ -11,49 +11,18 @@
     "petTimePerCoin": 0,
     "playerIndex": 0,
     "petIndex": 0,
+    "weaponType": 0,
+    "skillTypes": [
+        1,
+        2
+    ],
     "upgradeBoolDic": [
         {
-            "key": "코어",
-            "value": true
-        },
-        {
-            "key": "무기(�?",
+            "key": "무기(방패)",
             "value": false
         },
         {
-            "key": "?�틸리티 코어",
-            "value": true
-        },
-        {
-            "key": "?�레?�어 코어",
-            "value": true
-        },
-        {
-            "key": "무기(검)",
-            "value": false
-        },
-        {
-            "key": "메태??,
-            "value": false
-        },
-        {
-            "key": "?�률처형",
-            "value": false
-        },
-        {
-            "key": "?�킬 코어",
-            "value": true
-        },
-        {
-            "key": "?�간??코인",
-            "value": true
-        },
-        {
-            "key": "?�파",
-            "value": false
-        },
-        {
-            "key": "부??,
+            "key": "다중공격",
             "value": false
         },
         {
@@ -61,12 +30,48 @@
             "value": true
         },
         {
-            "key": "?�중공격",
+            "key": "부활",
             "value": false
         },
         {
-            "key": "무기(방패)",
+            "key": "돌파",
             "value": false
+        },
+        {
+            "key": "시간당 코인",
+            "value": false
+        },
+        {
+            "key": "스킬 코어",
+            "value": true
+        },
+        {
+            "key": "확률처형",
+            "value": false
+        },
+        {
+            "key": "메태오",
+            "value": false
+        },
+        {
+            "key": "무기(검)",
+            "value": false
+        },
+        {
+            "key": "플레이어 코어",
+            "value": true
+        },
+        {
+            "key": "유틸리티 코어",
+            "value": true
+        },
+        {
+            "key": "무기(창)",
+            "value": false
+        },
+        {
+            "key": "코어",
+            "value": true
         }
     ],
     "isUnlockCharacter": [],

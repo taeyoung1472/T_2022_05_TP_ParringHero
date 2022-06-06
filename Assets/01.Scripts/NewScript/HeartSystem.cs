@@ -21,7 +21,14 @@ public class HeartSystem : MonoBehaviour
     {
         for (int i = objects.Length - 1; i >= _hp; i--)
         {
-            objects[i].GetComponent<Image>().color = Color.gray;
+            try
+            {
+                objects[i].GetComponent<Image>().color = Color.gray;
+            }
+            catch
+            {
+                //¹üÀ§ ¹þ¾î³²
+            }
         }
         for (int i = 0; i < _hp; i++)
         {
