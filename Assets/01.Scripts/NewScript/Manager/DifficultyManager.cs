@@ -13,6 +13,15 @@ public class DifficultyManager : MonoSingleton<DifficultyManager>
     private int diffcultyIndex = 0;
     //public int DiffcultyIndex { get => diffcultyIndex; }
 
+    [SerializeField]
+    private GameObject diffifultyTextPrefab;
+
+    [SerializeField]
+    private float[] atkDelay = new float[5];
+
+    [SerializeField]
+    private float[] parringAtktime= new float[5];
+
     void Start()
     {
         GameManager.Instance.currentDifficultySO = difficultySO[diffcultyIndex];
@@ -21,34 +30,31 @@ public class DifficultyManager : MonoSingleton<DifficultyManager>
     void Update()
     {
         time += Time.deltaTime;    
-        if (time >= 2)
+        if (time >= 20)
         {
             diffcultyIndex++; 
             try
             {
                 print("난이도 조종!");
                 GameManager.Instance.currentDifficultySO = difficultySO[diffcultyIndex];
+                EnemyBase.attackDelayTime = atkDelay[diffcultyIndex]; 
+                EnemyBase.parringAtkTime = parringAtktime[diffcultyIndex];
+                StartCoroutine(CreatText());
             }
             catch
             {
                 //이미 최대 난이도
             }
             time = 0;
-            /*switch (diffcultyIndex)
-            {
-                case 0:
-                    difficultyUp?.Invoke();
-                    time = 0f;
-                    break;
-                case 1:
-                    difficultyUp?.Invoke();
-                    time = 0f;
-                    break;
-                case 2:
-                    difficultyUp?.Invoke();
-                    time = 0f;
-                    break;
-            }*/
         }
     }
+    IEnumerator CreatText()
+    {
+        print("텍스트잘나옴");
+        diffifultyTextPrefab.gameObject.SetActive(true);
+        CamManager.Instance.SetCamShake(0.5f, 3f);
+        yield return new WaitForSeconds(1.5f);
+        diffifultyTextPrefab.gameObject.SetActive(false);
+    }
+
 }

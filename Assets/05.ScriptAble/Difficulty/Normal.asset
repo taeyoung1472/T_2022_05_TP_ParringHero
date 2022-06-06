@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Normal
   m_EditorClassIdentifier: 
   name: "\uBCF4\uD1B5"
-  animAtkSpeed: 1.2
-  animMoveSpeed: 1.5
+  animAtkSpeed: 1.1
+  animMoveSpeed: 1.4

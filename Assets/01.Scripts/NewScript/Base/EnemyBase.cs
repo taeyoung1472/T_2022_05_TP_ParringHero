@@ -47,6 +47,8 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     [SerializeField]
     private DifficultySO _difficultySO;
     public static float staticSpeed = 1;
+    public static float parringAtkTime = 1;
+    public static float attackDelayTime = 1;
 
     #region 인터페이스 구현부
     public override void Init_Pop()
@@ -133,12 +135,12 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
         {
             yield return new WaitUntil(() => isCanAttack);
             //  print("어택딜레이" );
-            yield return new WaitForSeconds(enemyInfo.attackDelay);
+            yield return new WaitForSeconds(enemyInfo.attackDelay * attackDelayTime); //여따가 변수를 넣ㅡ며
             isCanDamage = true;
             anim.SetTrigger(attackHashStr);
             // print("패링에이블");
             PoolManager_Test.instance.Pop(PoolType.Sound).GetComponent<AudioPool>().PlayAudio(readyDamaged);
-            yield return new WaitForSeconds(enemyInfo.parringAbleTime);
+            yield return new WaitForSeconds(enemyInfo.parringAbleTime * parringAtkTime);
 
             // print("공격!");
             if (isCanAttack && !isDead)
@@ -233,7 +235,7 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     virtual protected void SpawnAlpabet()
     {
         int persent = Random.Range(0, 100) + 1;
-        if (persent <= 100)
+        if (persent <= 30)
         {
             _fiver.SpawnAlpa();
         }
@@ -242,6 +244,7 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     {
         float curAttackSpeed = _difficultySO.animAtkSpeed;//어차피 여기서 재 대입 하장ㄶ아
         diffcultySpeed = _difficultySO.animMoveSpeed;//스크립트 에이블 오브젝트 안에있는 변수는 접근 안하는게 좋음(바꾸는거)
+        
         anim.SetFloat("Speed", curAttackSpeed);
 
     }
