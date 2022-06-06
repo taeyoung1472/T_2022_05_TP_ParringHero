@@ -235,7 +235,7 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     virtual protected void SpawnAlpabet()
     {
         int persent = Random.Range(0, 100) + 1;
-        if (persent <= 100)
+        if (persent <= 30)
         {
             _fiver.SpawnAlpa();
         }
