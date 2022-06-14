@@ -149,14 +149,14 @@ public class GameManager : MonoSingleton<GameManager>
             }
         }
         string jsonData = JsonUtility.ToJson(user, true);
-        string path = Path.Combine(Application.dataPath, "playerData.json");
+        string path = Path.Combine(Application.persistentDataPath, "playerData.json");
         File.WriteAllText(path, jsonData);
     }
     [ContextMenu("불러오기")]
     public void LoadUser()
     {
         print("불러오기");
-        string path = Path.Combine(Application.dataPath, "playerData.json");
+        string path = Path.Combine(Application.persistentDataPath, "playerData.json");
         string jsonData = File.ReadAllText(path);
         user = JsonUtility.FromJson<User>(jsonData);
         coinUI.AddCoin(0);

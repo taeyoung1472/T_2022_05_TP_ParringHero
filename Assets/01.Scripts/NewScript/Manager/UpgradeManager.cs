@@ -57,6 +57,14 @@ public class UpgradeManager : MonoBehaviour
             {
                 gameManager.currentUser.reberseChance++;
             }
+            if(upgradeInfo.upgrade.skillType != SkillType.None)
+            {
+                gameManager.currentUser.skillTypes.Add(upgradeInfo.upgrade.skillType);
+            }
+            if(upgradeInfo.upgrade.weaponType != WeaponType.None)
+            {
+                gameManager.currentUser.weaponType = upgradeInfo.upgrade.weaponType;
+            }
             gameManager.currentUser.coin -= upgradeInfo.price;
         }
         else

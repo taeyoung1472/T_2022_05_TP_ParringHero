@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Core_Attack_Sword
   m_EditorClassIdentifier: 
   name: "\uBB34\uAE30(\uAC80)"
-  desc: "\uC2DC\uAC04\uB2F9 HP \uD68C\uBCF5\uB7C9\uC774 +1 \uB429\uB2C8\uB2E4."
+  desc: "\uB354\uC6B1\uB354 \uB6F0\uC5B4\uB09C \uAC80\uC744 \uC0AC\uC6A9\uD569\uB2C8\uB2E4"
   price: 1000
   upgrade:
     timePerCoin: 0

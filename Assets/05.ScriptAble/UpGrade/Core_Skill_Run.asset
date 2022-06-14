@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 046866f44e7082a4d921df87bbbba75b, type: 3}
   m_Name: Core_Skill_Run
   m_EditorClassIdentifier: 
-  name: "\uB3CC\uD30C"
-  desc: "\uC2DC\uAC04\uB2F9 HP \uD68C\uBCF5\uB7C9\uC774 +1 \uB429\uB2C8\uB2E4."
+  name: "\uBBF8\uC815"
+  desc: "\uBBF8\uC815(\uBBF8\uAD6C\uD604)"
   price: 1000
   upgrade:
     timePerCoin: 0

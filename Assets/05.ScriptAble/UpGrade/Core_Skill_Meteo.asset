@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Core_Skill_Meteo
   m_EditorClassIdentifier: 
   name: "\uBA54\uD0DC\uC624"
-  desc: "\uC2DC\uAC04\uB2F9 HP \uD68C\uBCF5\uB7C9\uC774 +1 \uB429\uB2C8\uB2E4."
+  desc: "\uD558\uB298\uC5D0\uC11C \uC218\uB9CE\uC740 \uBA54\uD0DC\uC624\uB97C \uC18C\uD658\uD569\uB2C8\uB2E4."
   price: 1000
   upgrade:
     timePerCoin: 0

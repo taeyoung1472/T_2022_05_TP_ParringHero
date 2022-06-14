@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea6c1d2258dd509448bfb4171a72080a, type: 3}
   m_Name: Gobline
   m_EditorClassIdentifier: 
-  hp: 6
+  hp: 2
   damage: 1
   speed: 2.5
   runSpeed: 1
   dashSpeed: 5
   parringAbleTime: 1
-  attackDelay: 1
+  attackDelay: 0.5
   stunTime: 5
   attackMinuesDelay: 5
   judgeTime: 0.2
   animTime: 5
-  attackPos: 3
+  attackPos: 1.75
   particleScale: 0.5
   maxAttackSpeed: 1.5
   maxSpeed: 5

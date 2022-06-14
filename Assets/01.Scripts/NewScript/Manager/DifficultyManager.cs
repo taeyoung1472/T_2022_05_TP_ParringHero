@@ -21,6 +21,7 @@ public class DifficultyManager : MonoSingleton<DifficultyManager>
 
     [SerializeField]
     private float[] parringAtktime= new float[5];
+    [SerializeField] private AudioClip diffChangeClip;
 
     void Start()
     {
@@ -35,11 +36,10 @@ public class DifficultyManager : MonoSingleton<DifficultyManager>
             diffcultyIndex++; 
             try
             {
-                print("난이도 조종!");
                 GameManager.Instance.currentDifficultySO = difficultySO[diffcultyIndex];
                 EnemyBase.attackDelayTime = atkDelay[diffcultyIndex]; 
                 EnemyBase.parringAtkTime = parringAtktime[diffcultyIndex];
-                StartCoroutine(CreatText());
+                CreatText();
             }
             catch
             {
@@ -48,13 +48,11 @@ public class DifficultyManager : MonoSingleton<DifficultyManager>
             time = 0;
         }
     }
-    IEnumerator CreatText()
+    void CreatText()
     {
-        print("텍스트잘나옴");
+        PoolManager_Test.instance.Pop(PoolType.Sound).GetComponent<AudioPool>().PlayAudio(diffChangeClip, 1, 0.75f);
         diffifultyTextPrefab.gameObject.SetActive(true);
         CamManager.Instance.SetCamShake(0.5f, 3f);
-        yield return new WaitForSeconds(1.5f);
-        diffifultyTextPrefab.gameObject.SetActive(false);
     }
 
 }

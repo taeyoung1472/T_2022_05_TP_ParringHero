@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Core_Utility_PerfectKill
   m_EditorClassIdentifier: 
   name: "\uD655\uB960\uCC98\uD615"
-  desc: "\uCD5C\uB300 Hp\uAC00 5\uC0C1\uC2B9\uD569\uB2C8\uB2E4"
+  desc: "\uC77C\uC815 \uD655\uB960\uB85C \uC989\uC2DC\uCC98\uD615\uC774 \uAC00\uB2A5\uD569\uB2C8\uB2E4.(\uBBF8\uAD6C\uD604)"
   price: 1000
   upgrade:
     timePerCoin: 0

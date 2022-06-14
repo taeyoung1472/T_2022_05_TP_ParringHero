@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 //이러면 돼었을걸?
 public class EnemyBase : PoolAbleObject//PoolingBase , ISound
@@ -26,7 +28,9 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     protected bool isCanMove = true;
     protected bool isDead = false;
     protected bool isDeadEffect = false;
-    protected bool isCanAttack = false;
+    protected bool isCanAttack = true;
+    protected bool isStop = false;
+    [SerializeField] protected bool isCanAttackRange = false;
     protected bool isCanDamage = false;
 
     public float stopTime;
@@ -77,12 +81,18 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     {
         if (transform.position.x >= GameManager.Instance.Player.position.x + enemyInfo.attackPos)
         {
-            isCanAttack = false;
+            isCanAttackRange = false;
+            isStop = false;
             Move();
         }
         else
         {
-            isCanAttack = true;
+            isCanAttackRange = true;
+            if (!isStop)
+            {
+                isStop = true;
+                rb.velocity = Vector2.zero;
+            }
         }
     }
     virtual public void GetDamage()
@@ -133,18 +143,15 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
         int layerMask = 1 << LayerMask.NameToLayer("Player");
         while (true)
         {
-            yield return new WaitUntil(() => isCanAttack);
-            //  print("어택딜레이" );
-            yield return new WaitForSeconds(enemyInfo.attackDelay * attackDelayTime); //여따가 변수를 넣ㅡ며
+            yield return new WaitUntil(() => isCanAttackRange);
+            yield return new WaitForSeconds(enemyInfo.attackDelay * attackDelayTime);
             isCanDamage = true;
             anim.SetTrigger(attackHashStr);
-            // print("패링에이블");
             PoolManager_Test.instance.Pop(PoolType.Sound).GetComponent<AudioPool>().PlayAudio(readyDamaged);
             yield return new WaitForSeconds(enemyInfo.parringAbleTime * parringAtkTime);
-
-            // print("공격!");
             if (isCanAttack && !isDead)
             {
+                Debug.LogWarning($"공격! Sec : {DateTime.Now.Second} Mil : {DateTime.Now.Millisecond}");
                 RaycastHit2D hit = Physics2D.Raycast(rayTrans.position, Vector2.left, 15, layerMask);
                 if (hit)
                 {
@@ -176,7 +183,6 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
         PushedBack();
         if (currentHp <= 0)
         {
-            //Instantiate(coinEffect, transform.position, Quaternion.identity);
             Dead();
         }
         yield return new WaitForSeconds(1f);
@@ -215,7 +221,6 @@ public class EnemyBase : PoolAbleObject//PoolingBase , ISound
     }
     virtual protected void PushedBack()
     {
-        isCanAttack = false;
         isCanMove = false;
         Damaged(1);
         rb.AddForce(new Vector2(Random.Range(10f, 20f), 2.5f), ForceMode2D.Impulse);

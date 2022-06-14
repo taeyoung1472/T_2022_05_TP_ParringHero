@@ -7,6 +7,7 @@ public class Fiver : MonoBehaviour
     [SerializeField] private List<GameObject> alpabet = new List<GameObject>(); // parrying¾ËÆÄºª
     [SerializeField] private GameObject _fiverCol;
     [SerializeField] public GameObject alpabetParent;
+    [SerializeField] private AudioClip fiverClip;
     private MoveBackground[] _moveBackground;
     private int count = 0;
     private Player _player;
@@ -42,7 +43,7 @@ public class Fiver : MonoBehaviour
     IEnumerator FiverTime()
     {
         StartFevering();
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         EndFiver();
     }
     public void EndFiver()
@@ -66,6 +67,7 @@ public class Fiver : MonoBehaviour
     }
     public void StartFevering()
     {
+        PoolManager_Test.instance.Pop(PoolType.Sound).GetComponent<AudioPool>().PlayAudio(fiverClip, 0.25f);
         foreach (MoveBackground mb in _moveBackground)
         {
             mb.SetFever();

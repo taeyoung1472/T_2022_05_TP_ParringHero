@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 046866f44e7082a4d921df87bbbba75b, type: 3}
-  m_Name: Core_Attack_Length
+  m_Name: Core_Attack_Axe
   m_EditorClassIdentifier: 
-  name: "\uBB34\uAE30(\uCC3D)"
-  desc: "\uC2DC\uAC04\uB2F9 HP \uD68C\uBCF5\uB7C9\uC774 +1 \uB429\uB2C8\uB2E4."
+  name: "\uBB34\uAE30(\uB3C4\uB07C)"
+  desc: "\uB3C4\uB07C\uB97C \uC0AC\uC6A9 \uD560\uC218 \uC788\uC2B5\uB2C8\uB2E4"
   price: 1000
   upgrade:
     timePerCoin: 0

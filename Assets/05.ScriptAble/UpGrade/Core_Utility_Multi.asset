@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Core_Utility_Multi
   m_EditorClassIdentifier: 
   name: "\uB2E4\uC911\uACF5\uACA9"
-  desc: "\uCD5C\uB300 Hp\uAC00 5\uC0C1\uC2B9\uD569\uB2C8\uB2E4"
+  desc: "\uB2E4\uC911\uACF5\uACA9\uC744 \uD560\uC218 \uC788\uC2B5\uB2C8\uB2E4.(\uBBF8\uAD6C\uD604)"
   price: 1000
   upgrade:
     timePerCoin: 0

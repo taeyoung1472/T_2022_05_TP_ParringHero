@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Core_Player_Revive
   m_EditorClassIdentifier: 
   name: "\uBD80\uD65C"
-  desc: "\uCD5C\uB300 Hp\uAC00 5\uC0C1\uC2B9\uD569\uB2C8\uB2E4"
+  desc: "\uD50C\uB808\uC774\uC5B4\uAC00 \uC8FD\uC744\uC2DC \uBD80\uD65C\uD560\uC218
+    \uC788\uC2B5\uB2C8\uB2E4(\uC544\uC9C1 \uBBF8\uAD6C\uD604)"
   price: 1000
   upgrade:
     timePerCoin: 0

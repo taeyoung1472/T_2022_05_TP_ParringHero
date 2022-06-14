@@ -18,12 +18,12 @@ MonoBehaviour:
   runSpeed: 1
   dashSpeed: 5
   parringAbleTime: 1
-  attackDelay: 1
+  attackDelay: 0.5
   stunTime: 5
   attackMinuesDelay: 5
   judgeTime: 0.2
   animTime: 5
-  attackPos: 7
+  attackPos: 2.5
   particleScale: 0.5
   maxAttackSpeed: 0
   maxSpeed: 0

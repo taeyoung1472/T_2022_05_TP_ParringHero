@@ -1490,9 +1490,9 @@ MonoBehaviour:
   col: {fileID: 9061976966010604390}
   anim: {fileID: 8008665272774780189}
   eyeAnimSpeed: 1
-  stopTime: 0.15
+  stopTime: 0.2
   stopping: 0
-  slowTime: 0.8
+  slowTime: 0.1
   readyDamaged: {fileID: 8300000, guid: 41eca37446a4be44693302a4532fbbdf, type: 3}
   _difficultySO: {fileID: 0}
 --- !u!1 &2467883686835254585

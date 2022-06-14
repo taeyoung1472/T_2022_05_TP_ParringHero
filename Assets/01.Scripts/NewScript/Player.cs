@@ -8,7 +8,7 @@ public class Player : MonoBehaviour, ISound
 {
     public int MaxHp { set { maxHp = value; } get { return maxHp; } }
     public int CurHp { set { curHp = value; } get { return curHp; } }
-    public bool IsAttackSucces { set { isAttackSucces = value; } }
+    public bool IsAttackSucces { set { isAttackSucces = value; if (value == true) { atkTime = 0; }; } }
     //[SerializeField] private Animator[] petAnim;
     [SerializeField] private Collider2D attackCollider;
     //[SerializeField] private GameObject bloodEfeect;//, soundObject;
@@ -60,67 +60,20 @@ public class Player : MonoBehaviour, ISound
         {
             print("Tuto");
         }
-        StartCoroutine(CheckAttack());
     }
     public void Update()
     {
         atkTime -= Time.deltaTime;
-        CheckInput();
     }
-    public void CheckInput()
+    public void InputAttack()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (atkTime > 0)
         {
-            if (atkTime > 0)
-            {
-                return;
-            }
-            if (GameManager.Instance.IsTuto)
-            {
-                if (GameManager.Instance.isAttackTuto)
-                {
-                    playerAnimator.SetTrigger("Attack");
-                    StartCoroutine(Attack());
-                }
-            }
-            else
-            {
-                playerAnimator.SetTrigger("Attack");
-                StartCoroutine(Attack());
-            }
-            PlaySound(attackAudioClip[GameManager.Instance.currentUser.playerIndex]);
+            return;
         }
-    }
-    IEnumerator CheckAttack()
-    {
-        while (true)
-        {
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
-            if (GameManager.Instance.IsTuto)
-            {
-                if (GameManager.Instance.isAttackTuto)
-                {
-                    StartCoroutine(Attack());
-                }
-            }
-            else
-            {
-                StartCoroutine(Attack());
-            }
-            playerAnimator.SetTrigger(AttackHashStr);
-            PlaySound(attackAudioClip[GameManager.Instance.currentUser.playerIndex]);
-            yield return new WaitForSeconds(0.2f);
-            if (isAttackSucces)
-            {
-                isAttackSucces = false;
-                atkTime = 0f;
-
-            }
-            else
-            {
-                yield return new WaitForSeconds(attackDelay - 0.2f);
-            }
-        }
+        StartCoroutine(Attack());
+        playerAnimator.SetTrigger(AttackHashStr);
+        PlaySound(attackAudioClip[GameManager.Instance.currentUser.playerIndex]);
     }
     public IEnumerator Attack()
     {
