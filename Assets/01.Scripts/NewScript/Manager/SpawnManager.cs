@@ -5,9 +5,15 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField] private Transform spawnPos; 
+    [SerializeField] private Transform spawnPos;
     [SerializeField] private SpawnInfo[] spawnInfos;
     [SerializeField] private float spawnTime;
+    [SerializeField] private int bossSpawnLateCount;
+    [SerializeField] private GameObject boss;
+    int spawnCount = 0;
+    bool isBossAlive;
+    bool isSpawned;
+    public bool IsBossAlive { set { isBossAlive = value; } }
 
     void Start()
     {
@@ -28,9 +34,19 @@ public class SpawnManager : MonoBehaviour
                 total += spawnInfos[i].SpawnPercent;
                 if (temp < total)
                 {
-                    GameObject obj = PoolManager_Test.instance.Pop(spawnInfos[i].PoolType);
-                    obj.transform.position = spawnPos.position;
-                    //Instantiate(spawnInfos[i].SpawnThing, spawnPos.position, Quaternion.identity);
+                    if(spawnCount >= bossSpawnLateCount && !isBossAlive && !isSpawned)
+                    {
+                        boss.SetActive(true);
+                        isBossAlive = true;
+                        isSpawned = true;
+                        yield return new WaitUntil(() => !isBossAlive);
+                    }
+                    else
+                    {
+                        GameObject obj = PoolManager_Test.instance.Pop(spawnInfos[i].PoolType);
+                        obj.transform.position = spawnPos.position;
+                        spawnCount++;
+                    }
                     break;
                 }
             }

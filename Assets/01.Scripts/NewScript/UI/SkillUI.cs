@@ -8,6 +8,7 @@ public class SkillUI : MonoBehaviour
 {
     [SerializeField] private Image skillProfile;
     [SerializeField] private SkillType skillType;
+    [SerializeField] private AudioClip audioClip;
     SkillManager skillManager;
     bool isEnableSkill = false;
     public SkillType SkillType { get { return skillType; } }
@@ -30,6 +31,10 @@ public class SkillUI : MonoBehaviour
     }
     void Use()
     {
+        if(audioClip != null)
+        {
+            PoolManager_Test.instance.Pop(PoolType.Sound).GetComponent<AudioPool>().PlayAudio(audioClip, 1);
+        }
         if (!isEnableSkill) return;
         skillManager.Skill(SkillType);
         skillProfile.fillAmount = 0;

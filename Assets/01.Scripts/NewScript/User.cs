@@ -23,7 +23,7 @@ public class User
     public WeaponType weaponType;
     public List<SkillType> skillTypes;
 
-    public List<DictionaryJson<string, bool>> upgradeBoolDic;//Dictionary<string, bool> upgradeBoolDic = new Dictionary<string, bool>();
+    public List<DictionaryJson<string, bool>> upgradeBoolDic;
     public bool CheckJsonDicContains(string key)
     {
         foreach (DictionaryJson<string, bool> dic in upgradeBoolDic)

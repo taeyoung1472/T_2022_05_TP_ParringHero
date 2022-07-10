@@ -31,7 +31,7 @@ public class DifficultyManager : MonoSingleton<DifficultyManager>
     void Update()
     {
         time += Time.deltaTime;    
-        if (time >= 20)
+        if (time >= 30)
         {
             diffcultyIndex++; 
             try

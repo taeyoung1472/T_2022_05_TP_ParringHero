@@ -5,46 +5,55 @@ using Cinemachine;
 using DG.Tweening;
 public class CamManager : MonoSingleton<CamManager>
 {
-    public CinemachineVirtualCamera vCam;
+    public CinemachineVirtualCamera defaultCam;
+    public CinemachineVirtualCamera bossFocusCam;
+    public BossAprroachText bossAprroachText;
+    public AudioClip clip;
     CinemachineBasicMultiChannelPerlin cmPerlin;
-    CinemachineComponentBase componentBase;
-    public float _minmum = 3.5f;
-    public float _maximun = 8f;
-    static float t = 0f;
     Tween camTween = null;
-
     void Start()
     {
-        cmPerlin = vCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        componentBase = vCam.GetCinemachineComponent(CinemachineCore.Stage.Body);
-        _minmum = vCam.m_Lens.OrthographicSize;
+        cmPerlin = defaultCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
     }
     public void Update()
     {
-      
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            ZoomInOut();        
+        }
     }
     public void ZoomInOut()
     {
-        StopAllCoroutines();
-        StartCoroutine(Zoom());
+        PoolManager_Test.instance.Pop(PoolType.Sound).GetComponent<AudioPool>().PlayAudio(clip, 2, 0.75f);
+        Sequence seq = DOTween.Sequence();
+        seq.AppendCallback(() =>
+        {
+            defaultCam.gameObject.SetActive(false);
+            bossFocusCam.gameObject.SetActive(true);
+        });
+        seq.AppendInterval(0.5f);
+        seq.AppendCallback(() => bossAprroachText.Aprroach());
+        seq.AppendInterval(2f);
+        seq.AppendCallback(() =>
+        {
+            defaultCam.gameObject.SetActive(true);
+            bossFocusCam.gameObject.SetActive(false);
+        });
+        seq.AppendInterval(0.5f);
+        seq.AppendCallback(() => bossAprroachText.DisAprroach());
     }
-    IEnumerator Zoom()
-    {
-        StartCoroutine(Lerp(vCam.m_Lens.OrthographicSize, _maximun));
-        yield return new WaitForSeconds(1f);
-        StartCoroutine(Lerp(vCam.m_Lens.OrthographicSize, _minmum));
-    }
-    IEnumerator Lerp(float start, float end)
+    /*IEnumerator Lerp(float start, float end)
     {
         t = 0f;
-        while (vCam.m_Lens.OrthographicSize != end)
+ 
+        while (defaultCam.m_Lens.OrthographicSize != end)
         {
-            vCam.m_Lens.OrthographicSize = Mathf.Lerp(start, end, t);
+            defaultCam.m_Lens.OrthographicSize = Mathf.Lerp(start, end, t);
             t += Time.deltaTime;
             yield return null;
         }
         yield return null;
-    }
+    }*/
 
     public void SetCamShake(float duration, float power = 5f)
     {

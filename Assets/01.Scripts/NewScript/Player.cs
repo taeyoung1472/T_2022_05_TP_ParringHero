@@ -8,7 +8,7 @@ public class Player : MonoBehaviour, ISound
 {
     public int MaxHp { set { maxHp = value; } get { return maxHp; } }
     public int CurHp { set { curHp = value; } get { return curHp; } }
-    public bool IsAttackSucces { set { isAttackSucces = value; if (value == true) { atkTime = 0; }; } }
+    public bool IsAttackSucces { set { isAttackSucces = value; if (value == true) { atkTime = 0; attackCollider.enabled = false; }; } }
     //[SerializeField] private Animator[] petAnim;
     [SerializeField] private Collider2D attackCollider;
     //[SerializeField] private GameObject bloodEfeect;//, soundObject;
@@ -78,9 +78,9 @@ public class Player : MonoBehaviour, ISound
     public IEnumerator Attack()
     {
         attackCollider.enabled = true;
-        attackCollider.transform.DOMoveX(originAttackColPos + attackRange, 0.25f);
+        attackCollider.transform.DOMoveX(originAttackColPos + attackRange, 0.1f);
         atkTime = 2f;
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.1f);
 
         attackCollider.enabled = false;
         attackCollider.transform.DOMoveX(originAttackColPos, 0);

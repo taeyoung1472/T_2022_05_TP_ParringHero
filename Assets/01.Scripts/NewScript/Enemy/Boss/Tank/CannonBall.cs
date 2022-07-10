@@ -9,6 +9,14 @@ public class CannonBall : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Attack"))
+        {
+            GameManager.Instance.Player.GetComponent<Player>().IsAttackSucces = true;
+        }
+        else
+        {
+            GameManager.Instance.Player.GetComponent<Player>().GetDamage(1);
+        }
         Explosion();
     }
 
